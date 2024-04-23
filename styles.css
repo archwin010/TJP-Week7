@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald', Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --nav-color: #393939;
+    --soft-text-color: #39393999;
+    --alt-text-color: #2D2D2D;
+    --fb-color: #1B7BFD;
+    --twitter-color: #42C0F5;
+    --ig-color: #C23785;
+    --yt-color: #EF5043;
+    --orange1-color: #EF5043;
+    --orange2-color: #F65050;
+    --orange3-color: #FE4A51;
+    --purple-color: #A56CBD;
+    --green-color: #2ECC71;
+    --blue1-color: #0088FF;
+    --brown-color: #997C00;
+    --blue2-color: #49CFE8;
+    --purple2-color: #4C60F5;
+    --blue3-color: #0088FF;
+    --white-accent: #FFFFFF4D;
+
+    --alt-font-family1: 'Sofia Sans', Arial, sans-serif;
+    --alt-font-family2: 'Sofia', Arial, sans-serif;
+    --alt-font-family3: 'Montaga', Arial, sans-serif;
+
+    --nav-font-size: 1.25rem;
+    --nav2-font-size: 0.75rem;
+    --normal-font-size: 0.9375rem;
+    --soft-text-size: 0.8rem;
+}
+
+.container {
+    height: 100vh;
+}
+
+.header, .nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.left, .left > * {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-family: var(--alt-font-family1);
+    font-size: var(--nav-font-size);
+    color: var(--nav-color);
+}
+
+.weather {
+    gap: 0.5rem;
+}
+
+.right {
+    display: flex;
+    gap: 1rem;
+}
+
+.right > .iconify {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.right span.iconify {
+    border: none !important; /* Remove the border */
+    outline: none !important; /* Remove the outline */
+}
+
+.right > .iconify:first-of-type {
+    color: var(--fb-color);
+    background-color: white;
+    /* border-radius: 60%; */
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
+}
+
+.right > .iconify:nth-of-type(2) {
+    background-color: white;
+    color: var(--twitter-color);
+}
+
+.right > .iconify:nth-of-type(3) {
+    background-color: white;
+    color: var(--ig-color);
+}
+
+.right > .iconify:last-of-type {
+    background-color: white;
+    color: var(--yt-color);
+}
+/* END OF HEADER */
+
+/* NAVBAR */
+.nav-bar {
+    background-color: var(--nav-color);
+    color: white;
+    position: relative;
+}
+
+.nav-bar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 80rem;
+    width: 1px;
+    height: 100%;
+    background-color: var(--white-accent);
+}
+
+.nav-bar nav {
+    display: flex;
+    gap: 2rem;
+    box-sizing: border-box;
+}
+
+.nav-bar nav > .home {
+    background-color: var(--orange2-color);
+    margin: -2rem;
+    padding: 2rem;
+    position: relative;
+}
+
+nav > .home::after {
+    content: ""; /* this creates an empty pseudo element */
+    position: absolute; /* to position the pseudo element */
+    bottom: 1.5rem;
+    left: 2.3rem;
+    width: 30%;
+    border-bottom: 1px solid white;
+}
+
+nav > h3:first-of-type {
+    margin-left: 2rem;
+}
+
+nav > svg.iconify {
+    align-self: center;
+    margin-left: -1rem;
+}
+
+.search {
+    position: relative; /* to position the search icon */
+    margin: -2rem; /* this cancels out the navbar padding */
+    display: flex;
+    justify-content: end;
+    font-size: 0.6rem;
+}
+
+.search > input {
+    background-color: var(--nav-color);
+    width: 100%; /* to fill the container */
+    padding: 2rem;
+    border: none; /* to remove the customer border around the input element */
+}
+
+.search > svg.iconify {
+    position: absolute;
+    left: 11rem;
+    bottom: 2rem;
+    color: var(--white-accent);
+    font-size: 1rem;
+}
+/* END OF THE NAVBAR */
+
+.main1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* to automatically adjust based on available space */
+    grid-gap: 1rem; /* to create a gap between the container */
+    height: 100vh;
+    padding-top: 4rem;
+}
+
+.hero-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto; 
+    grid-gap: 1rem;
+}
+
+.hero-item3 {
+    grid-column: 1 / span 2;
+}
+
+/* this styles are for the hero images */
+.hero {
+    background-image: url("./resources/Image1.png");
+    background-size: cover; /* this ensures that the image covers the entire container without being distorted */
+    background-position: center; /* centers the image within the container */
+    background-repeat: no-repeat; /* prevents the image from repeating */
+    position: relative; /* to give me access to move items within the container */
+}
+
+.hero-group > .hero-item1 {
+    background-image: url("./resources/Image2.png");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+.hero-group > .hero-item2 {
+    background-image: url("./resources/Image3.png");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+.hero-group > .hero-item3 {
+    background-image: url("./resources/Image4.png");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+/* this styles target the texts on the image */
+.hero > .top {
+    background-color: var(--blue3-color);
+    width: 12%;
+    color: white;
+    font-family: var(--alt-font-family1);
+    font-size: var(--soft-text-size);
+    position: absolute;
+    text-align: center;
+    padding: 1rem;
+    line-height: 0;
+    letter-spacing: 0.05rem;
+    top: 2rem;
+    left: 3rem;
+}
+
+.hero > .second {
+    position: absolute;
+    font-family: var(--alt-font-family1);
+    color: white;
+    font-size: var(--normal-font-size);
+    bottom: 11rem;
+    left: 3rem;
+}
+
+.hero > .main {
+    color: white;
+    position: absolute;
+    font-size: 1.3rem;
+    width: 75%;
+    text-transform: capitalize; /* to capitalize the first letter of each word */
+    bottom: 3rem;
+    left: 3rem;
+}
+
+.hero-item1 {
+    position: relative;
+}
+
+.hero-item1 > .top {
+    background-color: var(--brown-color);
+    width: 25%;
+    color: white;
+    font-family: var(--alt-font-family1);
+    font-size: var(--soft-text-size);
+    position: absolute;
+    text-align: center;
+    padding: 0.9rem;
+    line-height: 0;
+    letter-spacing: 0.02rem;
+    left: 3rem;
+    top: 2rem;
+}
+
+.hero-item1 > .second {
+    position: absolute;
+    color: white;
+    font-family: var(--alt-font-family2);
+    width: 40%;
+    font-size: 0.8rem;
+    bottom: 3.5rem;
+    left: 3rem;
+}
+
+.hero-item1 > .main {
+    color: white;
+    position: absolute;
+    font-size: var(--soft-text-size);
+    font-weight: normal;
+    width: 70%;
+    text-transform: capitalize;
+    bottom: 1rem;
+    left: 3rem;
+}
+
+.hero-item2 {
+    position: relative;
+}
+
+.hero-item2 > .top {
+    background-color: var(--blue3-color);
+    width: 25%;
+    color: white;
+    font-family: var(--alt-font-family1);
+    font-size: var(--soft-text-size);
+    position: absolute;
+    text-align: center;
+    padding: 0.9rem;
+    line-height: 0;
+    letter-spacing: 0.02rem;
+    left: 3rem;
+    top: 2rem;
+}
+
+.hero-item2 > .second {
+    position: absolute;
+    color: white;
+    font-weight: normal;
+    font-family: var(--alt-font-family2);
+    width: 45%;
+    font-size: 0.8rem;
+    bottom: 3.5rem;
+    left: 3rem;
+}
+
+.hero-item2 > .main {
+    color: white;
+    position: absolute;
+    font-size: var(--soft-text-size);
+    font-weight: normal;
+    width: 60%;
+    text-transform: capitalize;
+    bottom: 1rem;
+    left: 3rem;
+}
+
+.hero-item3 {
+    position: relative;
+}
+
+.hero-item3 > .top {
+    background-color: var(--blue2-color);
+    width: 12%;
+    color: white;
+    font-family: var(--alt-font-family1);
+    font-size: var(--soft-text-size);
+    position: absolute;
+    text-align: center;
+    padding: 1rem;
+    line-height: 0;
+    letter-spacing: 0.05rem;
+    top: 2rem;
+    left: 3rem;
+}
+
+.hero-item3 > .second {
+    position: absolute;
+    font-family: var(--alt-font-family1);
+    color: white;
+    font-size: var(--normal-font-size);
+    bottom: 8rem;
+    left: 3rem;
+}
+
+.hero-item3 > .main {
+    color: white;
+    position: absolute;
+    font-size: 1.1rem;
+    width: 65%;
+    text-transform: capitalize;
+    bottom: 2rem;
+    left: 3rem;
+}
+/* this is the end of the first grid section that houses the four hero images on the webpage */
+
+

@@ -105,6 +105,82 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     color: white;
 }
+
+.mobile-nav {
+    font-size: 1.5rem;
+    display: flex;
+}
+
+.sidebar {
+    height: 100vh;
+    padding: 1rem;
+    display: none;
+}
+
+.sidebar > .categories {
+    width: 100%;
+    text-align: center;
+    line-height: 2.2;
+    padding-bottom: 7rem;
+}
+
+.sidebar > .categories > .active {
+    background-color: var(--orange2-color);
+    margin: 1rem;
+    color: white;
+}
+
+.logos {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.logos > i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.logos > i:first-of-type {
+    background-color: var(--fb-color);
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.logos > i:nth-of-type(2) {
+    background-color: var(--twitter-color);
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.logos > i:nth-of-type(3) {
+    background-color: var(--ig-color);
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.logos > i:last-of-type {
+    background-color: var(--yt-color);
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.hide {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
 /* END OF HEADER */
 
 /* NAVBAR */
@@ -150,7 +226,7 @@ nav > h3:first-of-type {
     margin-left: 2rem;
 }
 
-nav > svg.iconify {
+nav > i {
     align-self: center;
     margin-left: -1rem;
 }
@@ -170,7 +246,7 @@ nav > svg.iconify {
     border: none; /* to remove the customer border around the input element */
 }
 
-.search > svg.iconify {
+.search > i {
     position: absolute;
     left: 11rem;
     bottom: 2rem;
@@ -402,7 +478,7 @@ nav > svg.iconify {
     position: absolute;
     bottom: -0.7rem;
     left: 0;
-    width: 189%;
+    width: 196%;
     border-bottom: 1px solid var(--orange2-color);
 }
 
@@ -564,6 +640,7 @@ nav > svg.iconify {
     margin-bottom: 1rem;
 }
 
+
 .main2-grid > .image img {
     width: 100%;
 }
@@ -583,6 +660,7 @@ nav > svg.iconify {
 .main2-grid > .second > h5 {
     font-size: 1.05rem;
     text-transform: capitalize;
+    width: 80%;
 }
 
 .main2-right > .right-grid {
@@ -782,7 +860,7 @@ nav > svg.iconify {
 }
 
 @media screen and (min-width: 1200px) {
-    .header > .right > svg.iconify {
+    .header > .right > .mobile-nav {
         display: none;
     }
 }

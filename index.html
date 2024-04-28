@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./styles.css">
 
     <!-- ICONIFY TAG -->
-    <script src="//code.iconify.design/1/1.0.6/iconify.min.js"></script>
+    <!-- <link href="//code.iconify.design/1/1.0.6/iconify.min.js"></link> -->
 
     <!-- OSWALD GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,11 +40,11 @@
         <div class="header">
             <div class="left">
                 <div class="weather">
-                    <span class="iconify" data-icon="mdi:weather-hazy"></span>
+                    <i class="ri-haze-fill"></i>
                     <p>15°C New York</p>
                 </div>
                 <div class="date">
-                    <span class="iconify" data-icon="mdi:clock-time-three-outline"></span>
+                    <i class="ri-time-line"></i>
                     <p>Wednesday, 10 January 2021</p>
                 </div>
             </div>
@@ -56,7 +56,31 @@
                 <i class="ri-twitter-fill"></i>
                 <i class="ri-instagram-fill"></i>
                 <i class="ri-youtube-fill"></i>
-                <span class="iconify" data-icon="mdi:menu"></span>
+
+                <div class="mobile-nav">
+                    <i id="menu-btn" class="ri-menu-line"></i>
+                    <i id="close-btn" class="ri-close-line"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="categories">
+                <h3 class="active">Home</h3>
+                <h3>International</h3>
+                <h3>Sports</h3>
+                <h3>Opinion</h3>
+                <h3>Business</h3>
+                <h3>Youth</h3>
+                <h3>Entertainment</h3>
+                <h3>Pages</h3>
+            </div>
+
+            <div class="logos">
+                <i class="ri-facebook-line"></i>
+                <i class="ri-twitter-fill"></i>
+                <i class="ri-instagram-fill"></i>
+                <i class="ri-youtube-fill"></i>
             </div>
         </div>
         <div class="nav-bar">
@@ -72,12 +96,12 @@
                 <h3>Entertainment</h3>
                 <h3>Lifestyle</h3>
                 <h3>Pages</h3>
-                <span class="iconify" data-icon="mdi:chevron-down"></span>
+                <i class="ri-arrow-down-s-line"></i>
             </nav>
 
             <div class="search">
                 <input type="search" placeholder="Search for">
-                <span class="iconify" data-icon="mdi:magnify"></span>
+                <i class="ri-search-line"></i>
             </div>
         </div>
         <div class="main1">
@@ -315,6 +339,8 @@
             </p>
         </div>
     </div>
+
+    <script src="./script.js"></script>
 
 </body>
 </html>
